@@ -8,7 +8,7 @@ def render_main():
 
 @app.route("/response")
 def render_response():
-    r1 = request.args['r2'] 
+    r1 = request.args['r1'] 
     #The request object stores information about the request sent to the server.
     #args is an ImmutableMultiDict (like a dictionary but can have mutliple values for the same key and can't be changed)
     #The information in args is visible in the url for the page being requested. ex. .../response?color=blue
@@ -22,6 +22,7 @@ def render_response():
 @app.route("/")
 def render_main():
     return render_template('q2t.html')
+
 
 @app.route("/response")
 def render_response():
